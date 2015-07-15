@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy, :create]
-  before_action :check_admin, only: [:new, :edit, :create, :update]
+  before_action :check_admin, only: [:new, :edit, :create, :update, :destroy]
   
   expose(:categories)
   expose(:category)
@@ -47,6 +47,8 @@ class CategoriesController < ApplicationController
     end
 
     def check_admin
-      redirect_to new_user_session_path unless current_user.admin?
+      unless current_user.admin?
+        redirect_to new_user_session_path, alert: "No privilages"
+     end
     end
 end

@@ -1,19 +1,13 @@
-%h1 Listing categories
+.col-md-12
+  %h1.main-header.center Categories
+  #categories
+    - categories.each do |category|
+      .col-md-4
+        = link_to category do
+          %p.category-item.center= category.name
 
-%table.table
-  %tr
-    %th Name
-    %th
-    %th
-    %th
-
-  - categories.each do |category|
-    %tr
-      %td= category.name
-      %td= link_to 'Show', category
-      %td= link_to 'Edit', edit_category_path(category)
-      %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Category', new_category_path
+        %span.category-links
+          - if user_signed_in? && current_user.admin?
+            = link_to "New Category", new_category_path
+            = link_to "Edit", edit_category_path(category)
+            = link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
