@@ -1,7 +1,21 @@
 .container
-  - category.products.each do |product|
-    .col-sm-4.col-lg-4.col-md-4
-      = product.title
+  #products
+    - category.products.each do |product|
+      .col-md-4
+        .product
+          = link_to category_product_path(category, product) do
+            %img{src: "https://placehold.it/350x150", alt: "Placeholder Image"}
+          .product_content
+            .title.center
+              %h2= link_to product.title, category_product_path(category, product)
+            .col-md-2
+              %p.price= number_to_currency(product.price, unit: "$")
+            .col-md-4.col-md-offset-2
+              %p.no_reviews= pluralize(product.reviews.size, "Review")
+            .col-md-4
+              %p.rating
+                Rating
+                = product.average_rating.to_i
 
   - if is_admin?
     %p
@@ -10,5 +24,3 @@
 
     = link_to 'Edit', edit_category_path(category)
     = link_to 'Back', root_url, class: 'btn btn-default new-cat-link'
-
-= link_to "Back", root_url, class: 'btn btn-default'
