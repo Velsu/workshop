@@ -90,3 +90,34 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 }
+
+.category-links {
+	a {
+		display: block;
+	}
+}
+
+.new-cat-link {
+	a {
+		margin-top: 2rem;
+	}
+}
+
+.jumbotron {
+	background-image: url("main.jpg");
+	background-size: cover;
+	padding: 4rem 1rem;
+	margin-bottom: 4rem;
+	.title {
+		color: white;
+		font-size: 4.5rem;
+		font-family: Verdana;
+		line-height: 1.5;
+	}
+	.content {
+		color: white;
+		font-style: italic;
+		margin-top: 4rem;
+		font-family: Verdana;
+	}
+}

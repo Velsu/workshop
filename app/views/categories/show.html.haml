@@ -1,17 +1,14 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = category.name
-
-%p
+.container
   - category.products.each do |product|
-    = product.title
+    .col-sm-4.col-lg-4.col-md-4
+      = product.title
 
-%p
-  %h3 New product
-  = render 'products/form'
+  - if is_admin?
+    %p
+      %h3 New product
+      = render 'products/form'
 
-= link_to 'Edit', edit_category_path(category)
-\|
-= link_to 'Back', categories_path, class: 'btn btn-primary'
+    = link_to 'Edit', edit_category_path(category)
+    = link_to 'Back', root_url, class: 'btn btn-default new-cat-link'
+
+= link_to "Back", root_url, class: 'btn btn-default'

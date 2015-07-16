@@ -1,5 +1,8 @@
 .col-md-12
-  %h1.main-header.center Categories
+  .col-md-6.col-md-offset-3
+    .jumbotron.center 
+      %p.title Categories
+      %p.content Browse our categories to find what You need
   #categories
     - categories.each do |category|
       .col-md-4
@@ -7,7 +10,8 @@
           %p.category-item.center= category.name
 
         %span.category-links
-          - if user_signed_in? && current_user.admin?
-            = link_to "New Category", new_category_path
+          - if is_admin?
             = link_to "Edit", edit_category_path(category)
             = link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
+
+            = link_to "New Category", new_category_path
