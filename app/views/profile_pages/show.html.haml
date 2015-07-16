@@ -9,10 +9,10 @@
 			= @profile.created_at.strftime("%d-%m-%Y")
 	#profile_reviews.col-md-6
 		- @reviews.each do |review|
-			.profile_review
+			.profile_title
 				= link_to review.product.title, category_product_path(review.product.category, review.product)
 				.profile_desc
 					= truncate(review.content, length: 90)
 				%p.profile_date
-					Published
+					Published at
 					= review.created_at.strftime("%d-%m-%Y")
