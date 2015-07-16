@@ -199,6 +199,9 @@ h1, h2, h3, h4, h5, h6 {
 		color: $black;
 		margin: 0 0 .5rem 0;
 		font-style: italic;
+		a {
+			text-decoration: none;
+		}
 	}
 	.review_content {
 		color: $gray;
@@ -262,6 +265,7 @@ textarea {
 			border-bottom: 1px solid #E9E9E9;
 			font-style: italic;
 			color: $black;
+			font-size: 1.25rem;
 		}
 	}
 }

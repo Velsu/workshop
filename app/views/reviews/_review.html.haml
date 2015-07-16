@@ -1,6 +1,6 @@
 .review
   %p.name
-    = review.author
+    = link_to review.author, show_profile_path(review.user_id)
     %b= review.rating
   %p.review_content= review.content
   -if is_admin?
