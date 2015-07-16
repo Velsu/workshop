@@ -25,6 +25,6 @@
 			= render reviews
 	.col-md-6
 		- if user_signed_in?
-			%h3 New Review
+			%h3 New Review(max 255 characters)
 			= render 'reviews/form'
 

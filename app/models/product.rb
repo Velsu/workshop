@@ -5,7 +5,7 @@ class Product < ActiveRecord::Base
 
   validates :price, presence: true, format: { with: /\A\d+(?:\.\d{0,2})?\z/}
   validates :title, presence: true
-  validates :description, presence: true
+  validates :description, presence: true, length: { maximum: 255 }
 
   def average_rating
   	rates = self.reviews.inject(0) do |sum, review|

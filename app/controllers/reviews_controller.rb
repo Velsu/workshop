@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
       product.reviews << review
       redirect_to category_product_url(product.category, product), notice: 'Review was successfully created.'
     else
-      redirect_to :back
+      redirect_to :back, notice: "There was a problem creating a Review"
     end
   end
 
