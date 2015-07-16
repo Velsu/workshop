@@ -132,6 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 		font-size: 1.5rem;
 		color: $black;
 		text-decoration: none;
+		margin: 2rem;
 		@include transitions;
 		&:hover {
 			@include shadows;
@@ -180,6 +181,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.return_category {
+	text-align: center;
+	a {
+		display: inline-block;
+		text-align: center;
+		margin-left: 2rem;
+		margin-top: -4rem;
+		padding: 1rem 3rem;
+	}
+}
 /* Reviews */
 
 #reviews {
