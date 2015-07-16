@@ -222,3 +222,26 @@ input[type="text"], input[type="email"], input[type="password"] {
 textarea {
 	min-height: 100px;
 }
+
+/* Profile Page */
+
+#profile_account {
+	.name {
+		font-family: Verdana, sans-serif;
+		color: $black;
+	}
+	.mail {
+		a {
+			color: $gray;
+			text-decoration: none;
+		}
+	}
+	.review_count {
+		font-style: italic;
+		color: $black;
+	}
+	.join_date {
+		color: $black;
+		font-style: italic;
+	}
+}

@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   end
 
   root 'categories#index'
+
+  scope '/profiles' do
+  	match ':id/', to: "profile_pages#show", as: "show_profile", via: [:get]
+  end
 end
