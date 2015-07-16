@@ -150,3 +150,73 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 }
+
+/* Products show page */
+
+#product_show {
+	padding-bottom: 2rem;
+	.product_image {
+		margin-bottom: 1rem;
+	}
+	h1 {
+		margin-left: 1.2rem;
+	}
+	.product_description {
+		font-size: 1.75rem;
+		margin: 2rem 0;
+		line-height: 1.5;
+		color: $gray;
+		border-bottom: 1px solid $gray;
+	}
+	.product_price {
+		margin-top: 2rem;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	.product_rating {
+		font-size: 1.25rem;
+		font-style: italic;
+		color: $black;
+	}
+}
+
+/* Reviews */
+
+#reviews {
+	padding-bottom: 4rem;
+	.review_count {
+		border-bottom: 1px solid $gray;
+		padding-bottom: 0.5rem;
+	}
+}
+
+.review {
+	padding: 2rem 0;
+	border-bottom: solid 1px #E9E9E9;
+	padding-left: 5%;
+	.name {
+		font-size: 1.3rem;
+		color: $black;
+		margin: 0 0 .5rem 0;
+		font-style: italic;
+	}
+	.review_content {
+		color: $gray;
+		margin: 0;
+		}
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	width: 100%;
+	margin-bottom: 1rem;
+	border: 1px solid $gray;
+	border-radius: .4rem;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	height: 40px;
+}
+
+textarea {
+	min-height: 100px;
+}
