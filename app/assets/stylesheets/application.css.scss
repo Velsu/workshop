@@ -148,6 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		.price,.no_reviews,.rating {
 			margin-top: 1rem;
+			font-size: 1.4rem;
 		}
 	}
 }
@@ -209,9 +210,12 @@ h1, h2, h3, h4, h5, h6 {
 		font-size: 1.3rem;
 		color: $black;
 		margin: 0 0 .5rem 0;
-		font-style: italic;
 		a {
 			text-decoration: none;
+		}
+		.score {
+			margin-left: 2rem;
+			font-style: italic;
 		}
 	}
 	.review_content {

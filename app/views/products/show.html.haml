@@ -13,8 +13,8 @@
 				= number_to_currency(product.price, unit: "$")
 		.product_rating
 			%p
-				Average rating
-				= product.average_rating.to_i
+				Average rating:
+				%b= "#{product.average_rating.to_i} / 5"
 				based on
 				= pluralize(product.reviews.size, "Review")
 			- if is_admin?
