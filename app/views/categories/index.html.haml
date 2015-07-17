@@ -1,9 +1,10 @@
-.col-md-12
-  .col-md-6.col-md-offset-3
-    .jumbotron.center 
-      %p.title Categories
-      %p.content Browse our categories to find what You need
-  #categories
+.container
+  .col-md-12
+    .col-md-6.col-md-offset-3
+      .jumbotron.center 
+        %p.title Categories
+        %p.content Browse our categories to find what You need
+  #categories.col-md-12
     - categories.each do |category|
       .col-md-4
         = link_to category do

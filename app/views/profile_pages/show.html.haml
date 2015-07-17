@@ -1,18 +1,19 @@
-.col-md-12
-	#profile_account.col-md-4.col-md-offset-1
-		%img{src: "http://placehold.it/150x150"}
-		%h2.name= @profile.firstname
-		%p.mail= mail_to @profile.email
-		%p.review_count= pluralize(@profile.reviews.count, "Review")
-		%p.join_date
-			Date joined
-			= @profile.created_at.strftime("%d-%m-%Y")
-	#profile_reviews.col-md-6
-		- @reviews.each do |review|
-			.profile_title
-				= link_to review.product.title, category_product_path(review.product.category, review.product)
-				.profile_desc
-					= truncate(review.content, length: 90)
-				%p.profile_date
-					Published at
-					= review.created_at.strftime("%d-%m-%Y")
+.container
+	.col-md-12
+		#profile_account.col-md-4.col-md-offset-1
+			%img{src: "http://placehold.it/150x150"}
+			%h2.name= @profile.firstname
+			%p.mail= mail_to @profile.email
+			%p.review_count= pluralize(@profile.reviews.count, "Review")
+			%p.join_date
+				Date joined
+				= @profile.created_at.strftime("%d-%m-%Y")
+		#profile_reviews.col-md-6
+			- @reviews.each do |review|
+				.profile_title
+					= link_to review.product.title, category_product_path(review.product.category, review.product)
+					.profile_desc
+						= truncate(review.content, length: 90)
+					%p.profile_date
+						Published at
+						= review.created_at.strftime("%d-%m-%Y")

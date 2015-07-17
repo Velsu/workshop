@@ -20,7 +20,7 @@ User.create!(firstname:  "Admin",
 end
 
 
-[{name: "Games"}, {name: "Clothes"}, {name: "Music"}].each do |name|
+[{name: "Games"}, {name: "Cloth"}, {name: "Music"}].each do |name|
 	Category.create!(name)
 end
 
